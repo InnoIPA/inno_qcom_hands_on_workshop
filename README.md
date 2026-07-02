@@ -1,4 +1,4 @@
-<h1 align="center">🔮 <span>Hands-On Workshop</span> Prep Site</h1>
+<h1 align="center"><span>🚀Hands-On Workshop🔥</span> Prep Site</h1>
 
 <p align="center">
   <marquee direction="up" scrollamount="3" height="100px" style="background-color: #0d1117; border: 1px dashed #3b82f6; padding: 10px; border-radius: 6px; width: 100px; text-align: center;">
