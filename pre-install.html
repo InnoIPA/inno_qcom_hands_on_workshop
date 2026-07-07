@@ -188,36 +188,9 @@
           </aside>
 
           <div>
-            <!-- W1 adb -->
-            <article class="step" id="win-adb">
-              <div class="step-num">01</div>
-              <div class="step-body">
-                <h3>adb <span class="step-sub-inline">(platform-tools)</span></h3>
-                <div class="sub"><span class="zh-only">連線 / 除錯平台</span><span class="en-only">Device connection / debugging</span></div>
-                <ol class="step-list">
-                  <li><span class="zh-only">下載 <a class="link" href="https://developer.android.com/tools/releases/platform-tools?hl=zh-tw" target="_blank" rel="noopener">platform-tools</a>（Google 官方）。</span><span class="en-only">Download <a class="link" href="https://developer.android.com/tools/releases/platform-tools?hl=zh-tw" target="_blank" rel="noopener">platform-tools</a> (official Google).</span></li>
-                  <li><span class="zh-only">解壓到固定路徑（例：<code>Desktop\platform-tools</code>）。</span><span class="en-only">Extract to a fixed path (e.g. <code>Desktop\platform-tools</code>).</span></li>
-                  <li><span class="zh-only">在該資料夾內按住 Shift 右鍵 → 開啟 PowerShell，執行驗證：</span><span class="en-only">In that folder, Shift + right-click → Open PowerShell, then verify:</span></li>
-                </ol>
-                <div class="code">
-                  <div class="code-head"><span class="lang">PowerShell</span>
-                    <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-label">Copy</span></button>
-                  </div>
-<pre>.\adb.exe version</pre>
-                </div>
-                <div class="callout">
-                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-                  <div>
-                    <span class="zh-only">若將該資料夾加入系統 PATH，往後可直接用 <code>adb</code>，不需 <code>.\adb.exe</code> 前綴。</span>
-                    <span class="en-only">If you add this folder to your system PATH, you can use <code>adb</code> directly without the <code>.\adb.exe</code> prefix.</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- W2 QSC -->
+            <!-- W1 QSC -->
             <article class="step" id="win-qsc">
-              <div class="step-num">02</div>
+              <div class="step-num">01</div>
               <div class="step-body">
                 <h3>Qualcomm Software Center <span class="step-sub-inline">(QSC)</span></h3>
                 <div class="sub"><span class="zh-only">下載 PCAT / QUD</span><span class="en-only">Download PCAT / QUD</span></div>
@@ -225,12 +198,15 @@
                   <li><span class="zh-only">下載並安裝 QSC：</span><span class="en-only">Download and install QSC:</span> <a class="link" href="https://softwarecenter.qualcomm.com/" target="_blank" rel="noopener">https://softwarecenter.qualcomm.com/</a></li>
                   <li><span class="zh-only">安裝後以 Qualcomm 帳號登入。</span><span class="en-only">After installing, sign in with your Qualcomm account.</span></li>
                 </ol>
+                <figure class="shot">
+                  <img class="shot-img" src="uploads/Qualcomm Software Center.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                </figure>
               </div>
             </article>
 
-            <!-- W3 PCAT -->
+            <!-- W2 PCAT -->
             <article class="step" id="win-pcat">
-              <div class="step-num">03</div>
+              <div class="step-num">02</div>
               <div class="step-body">
                 <h3>PCAT Tool</h3>
                 <div class="sub"><span class="zh-only">燒錄 image 工具</span><span class="en-only">Image flashing tool</span></div>
@@ -238,39 +214,85 @@
                   <li><span class="zh-only">打開 Qualcomm Software Center。</span><span class="en-only">Open Qualcomm Software Center.</span></li>
                   <li><span class="zh-only">在 Tools 搜尋 <code>Product Configuration Assistant Tool</code>，下載並安裝。</span><span class="en-only">Under Tools, search <code>Product Configuration Assistant Tool</code>, then download and install.</span></li>
                 </ol>
+                <figure class="shot">
+                  <img class="shot-img" src="uploads\Product Configuration Assistant Tool.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                </figure>
               </div>
             </article>
 
-            <!-- W4 QUD -->
+            <!-- W3 QUD -->
             <article class="step" id="win-qud">
-              <div class="step-num">04</div>
+              <div class="step-num">03</div>
               <div class="step-body">
                 <h3>QUD <span class="step-sub-inline">(Qualcomm USB Driver)</span></h3>
                 <div class="sub"><span class="zh-only">Qualcomm USB 驅動</span><span class="en-only">Qualcomm USB driver</span></div>
                 <ol class="step-list">
                   <li><span class="zh-only">打開 Qualcomm Software Center。</span><span class="en-only">Open Qualcomm Software Center.</span></li>
-                  <li><span class="zh-only">點選 QUD 下載並安裝。</span><span class="en-only">Select QUD, then download and install.</span></li>
+                  <li><span class="zh-only">在 Tools 搜尋 Qualcomm USB Driver，下載並安裝。</span><span class="en-only">Under Tools, search <code>Qualcomm USB Driver</code>, then download and install.</span></li>
                 </ol>
+                <figure class="shot">
+                  <img class="shot-img" src="uploads\Qualcomm USB Driver.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                </figure>
                 <div class="callout">
                   <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
                   <div>
-                    <span class="zh-only">安裝後 QSC 的 connected devices 顯示 <code>you have no devices connected</code> 為正常（此時尚未接上平台）。</span>
-                    <span class="en-only">After installing, QSC showing <code>you have no devices connected</code> is normal (no board attached yet).</span>
+                    <span class="zh-only">小提醒:一次只能安裝一個工具，若畫面顯示 <code>No logs found</code> 訊息，代表該工具尚未安裝。</span>
+                    <span class="en-only">Note: Please install only one tool at a time. If the <code>No logs found</code> message appears, it indicates that the tool has not been successfully installed.</span>
                   </div>
                 </div>
+                <figure class="shot">
+                  <img class="shot-img" src="uploads\No logs found.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                </figure>
               </div>
             </article>
 
-            <!-- W5 Docker -->
+            <!-- W4 Docker -->
             <article class="step" id="win-docker">
-              <div class="step-num">05</div>
+              <div class="step-num">04</div>
               <div class="step-body">
-                <h3>Docker Desktop <span class="step-sub-inline">(<span class="zh-only">需 WSL2</span><span class="en-only">needs WSL2</span>)</span></h3>
+                <h3>Model Conversion Env Setup (For iQ-foundry)</h3>
                 <div class="sub"><span class="zh-only">安裝環境為當日實作(Hands-on的基礎)，請務必於課前完成配置。</span>
                   <span class="en-only">A pre-configured environment is essential for the hands-on session; please ensure the installation is successful beforehand.</span></div>
                 <ol class="step-list">
-                  <li><span class="zh-only"><strong>安裝方式：</strong>請直接執行此腳本進行安裝。<a class="link" href="https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1" target="_blank">https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1</a></span>
-                      <span class="en-only"><strong>Installation:</strong>Please run the following script to install.<a class="link" href="https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1" target="_blank">https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1</a></span></li>
+                  <li>
+                    <span class="zh-only">下載到您指定的資料夾<a class="link" href="https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1" target="_blank">https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1</a></span>
+                    <span class="en-only">Download to your specified folder.<a class="link" href="https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1" target="_blank">https://github.com/InnoIPA/iQ-Foundry/blob/main/setup-windows-wsl.ps1</a></span>
+                  </li>
+
+                  <li>
+                    <span class="zh-only">以管理員權限開啟 Windows PowerShell</span>
+                    <span class="en-only">Open Windows PowerShell with Administrator rights:</span>
+    
+                    <div class="code">
+                     <div class="code-head">
+                     <span class="lang">bash</span>
+                      <button class="copy-btn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2"/>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                      </svg>
+                      <span class="copy-label">Copy</span>
+                      </button>
+                    </div>
+      <pre>cd "$env:USERPROFILE"</pre>
+    </div> </li> 
+                   <li>
+                    <span class="zh-only">在PowerShell開啟腳本所在的資料夾，執行以下指令，此步驟通常需要 <strong>5-10 分鐘</strong>。</span>
+                    <span class="en-only">Open the folder where the script is located in PowerShell and execute the following command.This step typically takes <strong>5-10 minutes</strong>.</span>
+                    <div class="code">
+                     <div class="code-head">
+                     <span class="lang">bash</span>
+                      <button class="copy-btn">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2"/>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                      </svg>
+                      <span class="copy-label">Copy</span>
+                      </button>
+                    </div>
+      <pre>powershell -ExecutionPolicy Bypass -File .\setup-windows-wsl.ps1</pre>
+    </div> </li> 
+                   
                 </ol>
                 <div class="callout">
                   <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
@@ -282,15 +304,18 @@
               </div>
             </article>
 
-            <!-- W6 MobaXterm -->
+            <!-- W5 MobaXterm -->
             <article class="step" id="win-moba">
-              <div class="step-num">06</div>
+              <div class="step-num">05</div>
               <div class="step-body">
                 <h3>MobaXterm <span class="step-sub-inline">(<span class="zh-only">UART 序列埠工具</span><span class="en-only">UART serial tool</span>)</span></h3>
                 <div class="sub"><span class="zh-only">看 boot log / debug</span><span class="en-only">View boot log / debug</span></div>
                 <ol class="step-list">
-                  <li><span class="zh-only">下載 <strong>MobaXterm Home Edition（Installer edition）</strong>並安裝：</span><span class="en-only">Download and install <strong>MobaXterm Home Edition (Installer edition)</strong>:</span> <a class="link" href="https://mobaxterm.mobatek.net/download-home-edition.html" target="_blank" rel="noopener">https://mobaxterm.mobatek.net/download-home-edition.html</a></li>
+                  <li><span class="zh-only">下載 <strong>MobaXterm Home Edition (Portable edition)</strong>並安裝：</span><span class="en-only">Download and install <strong>MobaXterm Home Edition (Portable edition)</strong>:</span> <a class="link" href="https://mobaxterm.mobatek.net/download-home-edition.html" target="_blank" rel="noopener">https://mobaxterm.mobatek.net/download-home-edition.html</a></li>
                 </ol>
+                <figure class="shot">
+                  <img class="shot-img" src="uploads\MobaXterm Home Edition.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                </figure>
                 <div class="callout">
                   <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
                   <div>
@@ -301,9 +326,9 @@
               </div>
             </article>
 
-            <!-- W7 CP210x -->
+            <!-- W6 CP210x -->
             <article class="step" id="win-cp210x">
-              <div class="step-num">07</div>
+              <div class="step-num">06</div>
               <div class="step-body">
                 <h3>CP210x USB-to-UART <span class="step-sub-inline"><span class="zh-only">驅動</span><span class="en-only">driver</span></span></h3>
                 <div class="sub"><span class="zh-only">USB 轉序列埠</span><span class="en-only">USB-to-serial</span></div>
@@ -313,6 +338,21 @@
                 </p>
               </div>
             </article>
+            <!-- W7 iQ-Foundry -->
+            <article class="step" id="win-moba">
+              <div class="step-num">07</div>
+              <div class="step-body">
+                <h3>Download iQ-Foundry Installer</h3>
+                <div class="sub"><span class="zh-only">因為檔案比較大，希望大家在研討會前先下載好，謝謝</span>
+                  <span class="en-only">The file is a bit large, so please make sure to download it before the conference starts. Thanks!</span></div>
+                <ol class="step-list">
+                  <li><span class="zh-only">下載</span> <a class="link" href="??" target="_blank" rel="noopener">??</a>
+                      <span class="en-only">Download</span> <a class="link" href="??" target="_blank" rel="noopener">??</a>
+                  </li>
+                </ol>
+                </div>
+            </article>
+
 
             <div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-12);padding-top:var(--space-8);border-top:1px solid var(--border);">
               <a href="index.html" class="btn-ghost">
@@ -360,55 +400,9 @@ adb version</pre>
               </div>
             </article>
 
-            <!-- U2 QSC -->
-            <article class="step" id="ub-qsc">
-              <div class="step-num">02</div>
-              <div class="step-body">
-                <h3>Qualcomm Software Center <span class="step-sub-inline">(QSC)</span></h3>
-                <div class="sub"><span class="zh-only">下載 PCAT / QUD</span><span class="en-only">Download PCAT / QUD</span></div>
-                <ol class="step-list">
-                  <li><span class="zh-only">下載並安裝 QSC（Linux 版）：</span><span class="en-only">Download and install QSC (Linux build):</span> <a class="link" href="https://softwarecenter.qualcomm.com/" target="_blank" rel="noopener">https://softwarecenter.qualcomm.com/</a></li>
-                  <li><span class="zh-only">安裝後以 Qualcomm 帳號登入。</span><span class="en-only">After installing, sign in with your Qualcomm account.</span></li>
-                </ol>
-              </div>
-            </article>
-
-            <!-- U3 PCAT -->
-            <article class="step" id="ub-pcat">
-              <div class="step-num">03</div>
-              <div class="step-body">
-                <h3>PCAT Tool</h3>
-                <div class="sub"><span class="zh-only">燒錄 image 工具</span><span class="en-only">Image flashing tool</span></div>
-                <ol class="step-list">
-                  <li><span class="zh-only">打開 Qualcomm Software Center。</span><span class="en-only">Open Qualcomm Software Center.</span></li>
-                  <li><span class="zh-only">在 Tools 搜尋 <code>Product Configuration Assistant Tool</code>，下載並安裝。</span><span class="en-only">Under Tools, search <code>Product Configuration Assistant Tool</code>, then download and install.</span></li>
-                </ol>
-              </div>
-            </article>
-
-            <!-- U4 QUD -->
-            <article class="step" id="ub-qud">
-              <div class="step-num">04</div>
-              <div class="step-body">
-                <h3>QUD <span class="step-sub-inline">(Qualcomm USB Driver)</span></h3>
-                <div class="sub"><span class="zh-only">Qualcomm USB 驅動</span><span class="en-only">Qualcomm USB driver</span></div>
-                <ol class="step-list">
-                  <li><span class="zh-only">打開 Qualcomm Software Center。</span><span class="en-only">Open Qualcomm Software Center.</span></li>
-                  <li><span class="zh-only">點選 QUD 下載並安裝。</span><span class="en-only">Select QUD, then download and install.</span></li>
-                </ol>
-                <div class="callout">
-                  <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-                  <div>
-                    <span class="zh-only">connected devices 顯示 <code>you have no devices connected</code> 為正常。</span>
-                    <span class="en-only">QSC showing <code>you have no devices connected</code> is normal.</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- U5 QDL -->
+            <!-- U2 QDL -->
             <article class="step" id="ub-qdl">
-              <div class="step-num">05</div>
+              <div class="step-num">02</div>
               <div class="step-body">
                 <h3>QDL <span class="step-sub-inline">(<span class="zh-only">命令列燒錄工具</span><span class="en-only">CLI flashing tool</span>)</span></h3>
                 <div class="sub"><span class="zh-only">命令列燒錄工具</span><span class="en-only">CLI flashing tool</span></div>
@@ -446,9 +440,9 @@ sudo meson install -C build</pre>
               </div>
             </article>
 
-            <!-- U6 Docker -->
+            <!-- U3 Docker -->
             <article class="step" id="ub-docker">
-              <div class="step-num">06</div>
+              <div class="step-num">03</div>
               <div class="step-body">
                 <h3>Docker</h3>
                 <div class="sub"><span class="zh-only">容器執行環境</span><span class="en-only">Container runtime</span></div>
@@ -516,9 +510,9 @@ sudo meson install -C build</pre>
               </div>
             </article>
 
-            <!-- U7 minicom -->
+            <!-- U4 minicom -->
             <article class="step" id="ub-minicom">
-              <div class="step-num">07</div>
+              <div class="step-num">04</div>
               <div class="step-body">
                 <h3>minicom <span class="step-sub-inline">(<span class="zh-only">UART 序列埠工具</span><span class="en-only">UART serial tool</span>)</span></h3>
                 <div class="sub"><span class="zh-only">看 boot log / debug</span><span class="en-only">View boot log / debug</span></div>
