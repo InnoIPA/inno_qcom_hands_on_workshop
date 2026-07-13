@@ -113,7 +113,7 @@
   .check-item .pv svg { width: 14px; height: 14px; }
 
   /* Repo cards */
-  .repo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-4); }
+  .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-4); margin-top: var(--space-4); }
   .repo-card {
     display: flex; flex-direction: column; gap: var(--space-3);
     padding: var(--space-6);
@@ -179,9 +179,7 @@
       <a href="index.html" class="nav-link"><span class="zh-only">總覽</span><span class="en-only">Overview</span></a>
       <a href="pre-install.html" class="nav-link"><span class="zh-only">預先安裝</span><span class="en-only">Pre-Install</span></a>
       <a href="flashing.html" class="nav-link"><span class="zh-only">燒錄</span><span class="en-only">Flashing</span></a>
-      <a href="script.html" class="nav-link"><span class="zh-only">腳本</span><span class="en-only">Script</span></a>
       <a href="handouts.html" class="nav-link active"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a>
-      <a href="faq.html" class="nav-link"><span class="zh-only">FAQ</span><span class="en-only">FAQ</span></a>
     </nav>
     <span class="nav-spacer"></span>
     <button class="nav-search" data-open-search aria-label="Open search">
@@ -197,10 +195,7 @@
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
       </span>
     </button>
-    <a href="faq.html" class="btn-cta">
-      <span class="zh-only">下一步:FAQ</span><span class="en-only">Next: FAQ</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-    </a>
+
   </div>
 </header>
 
@@ -291,9 +286,8 @@
     <section style="margin-top:var(--space-16);">
       <span class="eyebrow"><span class="zh-only">教材 Repo</span><span class="en-only">REPOSITORIES</span></span>
       <h2 class="display" style="font-size:clamp(26px,3vw,38px);">
-        <span class="zh-only">GitHub 專案</span><span class="en-only">GitHub projects</span>
+        <span class="zh-only">工作坊資料</span><span class="en-only">Workshop resources</span>
       </h2>
-
       <div class="repo-grid">
         <a class="repo-card" href="https://github.com/InnoIPA/iQ-Studio" target="_blank" rel="noopener">
           <span class="gh"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.5v-1.74c-2.92.64-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.47 1.14 3.07.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.17-4.78-5.18 0-1.15.41-2.08 1.08-2.82-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.88 1.07a10 10 0 0 1 5.24 0c2-1.35 2.88-1.07 2.88-1.07.57 1.45.21 2.52.1 2.79.67.74 1.08 1.67 1.08 2.82 0 4.02-2.46 4.9-4.8 5.16.38.33.71.97.71 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0 0 12 1.5z"/></svg></span>
@@ -311,19 +305,26 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
           </span>
         </a>
+        <a class="repo-card" href="script.html">
+          <span class="gh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4"/><path d="m16 8 4 4-4 4"/><path d="m13 5-2 14"/></svg></span>
+          <h4>Workshop Day Scripts</h4>
+          <span class="url">script.html / 操作腳本教材</span>
+          <span class="go"><span class="zh-only">開啟腳本教材</span><span class="en-only">open script handout</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </span>
+        </a>
+        <a class="repo-card" href="https://innodisk365-my.sharepoint.com/:f:/g/personal/hueiru_chen_innodisk_com/IgC2G6gnkh4_TpvdhepS1Kc7Aejh0C6UZgtrDnrJEH0MfbE?e=WayzAy" target="_blank" rel="noopener">
+          <span class="gh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 20 5 4 5-4"/><path d="M5 8h14"/></svg></span>
+          <h4>下載檔案</h4>
+          <span class="url">SharePoint 共用資料夾</span>
+          <span class="go"><span class="zh-only">開啟下載連結</span><span class="en-only">open download link</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </span>
+        </a>
       </div>
     </section>
 
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-12);padding-top:var(--space-8);border-top:1px solid var(--border);">
-      <a href="faq.html" class="btn-ghost">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
-        <span class="zh-only">回 FAQ</span><span class="en-only">Back to FAQ</span>
-      </a>
-      <a href="faq.html" class="btn-cta">
-        <span class="zh-only">下一步:FAQ</span><span class="en-only">Next: FAQ</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-      </a>
-    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-12);padding-top:var(--space-8);border-top:1px solid var(--border);"></div>
 
   </section>
 </main>

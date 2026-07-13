@@ -32,9 +32,7 @@
       <a href="index.html" class="nav-link"><span class="zh-only">總覽</span><span class="en-only">Overview</span></a>
       <a href="pre-install.html" class="nav-link"><span class="zh-only">預先安裝</span><span class="en-only">Pre-Install</span></a>
       <a href="flashing.html" class="nav-link"><span class="zh-only">燒錄</span><span class="en-only">Flashing</span></a>
-      <a href="script.html" class="nav-link active"><span class="zh-only">腳本</span><span class="en-only">Script</span></a>
       <a href="handouts.html" class="nav-link"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a>
-      <a href="faq.html" class="nav-link"><span class="zh-only">FAQ</span><span class="en-only">FAQ</span></a>
     </nav>
     <span class="nav-spacer"></span>
     <button class="nav-search" data-open-search aria-label="Open search">
@@ -51,7 +49,7 @@
       </span>
     </button>
     <a href="handouts.html" class="btn-cta">
-      <span class="zh-only">下一步：講義</span><span class="en-only">Next: Handouts</span>
+      <span class="zh-only">講義</span><span class="en-only">Handouts</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
     </a>
   </div>
@@ -61,41 +59,20 @@
   <section class="page">
 
     <span class="eyebrow"><span class="zh-only">步驟 03 · 當天操作腳本</span><span class="en-only">STEP 03 · WORKSHOP DAY SCRIPT</span></span>
-    <h1 class="display">
-      <span class="zh-only">iQ-Foundry + iQ-Studio<br/><span class="grad-text">實作腳本套件。</span></span>
-      <span class="en-only">iQ-Foundry + iQ-Studio<br/><span class="grad-text">Hands-on Workshop Package.</span></span>
-    </h1>
+    <h2 class="display">
+      <span class="zh-only">Qualcomm AI Hub ✕ YOLO26：<br/><span class="grad-text">BYOM 模型從 Float32 到 INT8 的裝置端部署</span></span>
+      <span class="en-only">Qualcomm AI Hub ✕ YOLO26：<br/><span class="grad-text">BYOM from float32 to int8 On-Device Deployment</span></span>
+    </h2>
     <p class="lead">
-      <span class="zh-only">在 <strong>Windows 11 + WSL2</strong> 主機與 <strong>EXMP-Q911</strong>（Qualcomm QCS9075）裝置上，走一遍完整的 YOLO26 模型部署流程：FP32 匯出（Qualcomm AI Hub）→ streampipe 9 路 FP32 裝置端 demo → INT8 量化（qc）→ mAP 比較 → iQ-Foundry 裝置端測試 → streampipe 9 路 INT8 裝置端 demo。每個步驟都封裝成 <code>scripts/</code> 目錄下的編號腳本，依序執行即可，不需要手動輸入指令。</span>
-      <span class="en-only">Walk through the full YOLO26 model deployment flow on a <strong>Windows 11 + WSL2</strong> host with an <strong>EXMP-Q911</strong> (Qualcomm QCS9075) target device: FP32 export (Qualcomm AI Hub) → streampipe 9-ch FP32 on-device demo → INT8 quantization (qc) → mAP comparison → iQ-Foundry on-device test → streampipe 9-ch INT8 on-device demo. Every step is packaged as a numbered script under <code>scripts/</code> — just run them in order. No manual command typing is required.</span>
+      <span class="zh-only">在 <strong>Windows 11 + WSL2</strong> 主機與 <strong>EXMP-Q911</strong>（Qualcomm QCS9075）裝置上，走一遍完整的 YOLO26 模型部署流程。</span>
+      <span class="en-only">Walk through the full YOLO26 model deployment flow on a <strong>Windows 11 + WSL2</strong> host with an <strong>EXMP-Q911</strong> (Qualcomm QCS9075) target device.</code> — just run them in order. No manual command typing is required.</span>
     </p>
 
     <!-- Pipeline diagram -->
     <div class="code" style="margin-top:var(--space-8);">
-      <div class="code-head"><span class="lang">pipeline</span>
-        <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-label">Copy</span></button>
-      </div>
-<pre>Step 0    Windows: setup-windows-wsl.ps1 (WSL2 + USB passthrough)
-   ↓
-Step 1    WSL: install adb, check Q911 connection
-   ↓
-Step 2    Install Docker, get iQ-Foundry image
-   ↓
-Step 3    Log in to Qualcomm AI Hub
-   ↓
-Step 4_1  YOLO26 FP32 export (.tflite)
-   ↓
-Step 4_2  Install iQ-Studio on Q911, run FP32 streampipe 9ch
-   ↓
-Step 5_1  Deploy Q911 runtime venv
-   ↓
-Step 5_2  INT8 quantization (qc)
-   ↓
-Step 5_3  mAP: FP32 vs INT8
-   ↓
-Step 5_4  iQ-Foundry on-device test
-   ↓
-Step 5_5  Run INT8 streampipe 9ch</pre>
+      <figure class="shot">
+        <img class="shot-img" src="uploads\workflow.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+      </figure>
     </div>
 
     <!-- Prerequisites -->
@@ -225,8 +202,8 @@ Step 5_5  Run INT8 streampipe 9ch</pre>
             <h3><span class="zh-only">Windows 主機設定（僅需一次）</span><span class="en-only">Windows Host Setup (one-time)</span></h3>
             <div class="sub">[WIN-PS]</div>
             <p>
-              <span class="zh-only">以<strong>系統管理員</strong>身分開啟 Windows PowerShell（開始 → 搜尋 PowerShell → 右鍵 → 以系統管理員身分執行），切換到套件的 <code>scripts</code> 資料夾：</span>
-              <span class="en-only">Open Windows PowerShell <strong>as Administrator</strong> (Start → search for PowerShell → right-click → Run as administrator), then change into the package's <code>scripts</code> folder:</span>
+              <span class="zh-only">以<strong>系統管理員</strong>開啟 Windows PowerShell（開始 → 搜尋 PowerShell → 右鍵 → <strong>以系統管理員身分執行</strong>），切換到套件的 <code>scripts</code> 資料夾：</span>
+              <span class="en-only">Open Windows PowerShell <strong>as Administrator</strong> (Start → search for PowerShell → right-click → <strong>Run as administrator</strong>), then change into the package's <code>scripts</code> folder:</span>
             </p>
             <div class="code">
               <div class="code-head"><span class="lang">powershell</span>
