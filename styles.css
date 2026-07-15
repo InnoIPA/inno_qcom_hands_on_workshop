@@ -975,6 +975,95 @@ h2.display { font-size: clamp(32px, 4.4vw, 56px); }
 .tab-panel { display: none; }
 .tab-panel.on { display: block; }
 
+/* ===== VIDEO CARD ===== */
+.video-card {
+  margin-top: var(--space-8);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 36%),
+    linear-gradient(135deg, var(--accent-bg-strong) 0%, rgba(255,255,255,0.02) 100%);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.video-card::before {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
+  pointer-events: none;
+}
+.video-card__badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  background: var(--gradient-btn);
+  color: var(--on-accent);
+  box-shadow: 0 14px 30px -12px var(--accent-bg-strong);
+  animation: float-y 3.2s ease-in-out infinite;
+}
+.video-card__body h3 {
+  margin: 0 0 var(--space-2);
+  font-size: clamp(20px, 2.3vw, 26px);
+  line-height: 1.2;
+}
+.video-card__eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.video-card__body p {
+  margin: 0 0 var(--space-4);
+  color: var(--text-2);
+}
+.video-card__hint {
+  margin-top: var(--space-3);
+  font-size: 13px;
+  color: var(--text-3);
+  line-height: 1.6;
+}
+.video-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--accent-text);
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+  width: fit-content;
+}
+.video-card__link:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 34px -14px var(--accent-bg-strong);
+}
+.video-card__link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.video-card__link:hover svg {
+  transform: translateX(3px);
+}
+
 /* ===== PREREQ CARD ===== */
 .prereq {
   display: flex;
@@ -1653,5 +1742,6 @@ h2.display { font-size: clamp(32px, 4.4vw, 56px); }
   .btn-cta { padding: 8px 12px; font-size: 13px; }
   .step { grid-template-columns: 40px 1fr; gap: var(--space-3); }
   .step-num { font-size: 24px; }
+  .video-card { grid-template-columns: 1fr; }
   .theme-toggle { display: none; }
 }
