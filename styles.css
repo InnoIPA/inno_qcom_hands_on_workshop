@@ -1355,7 +1355,7 @@ h2.display { font-size: clamp(32px, 4.4vw, 56px); }
   color: var(--accent-text);
 }
 
-/* ===== FAQ ===== */
+/* ===== FAQ(x) ===== */
 .faq-list { display: flex; flex-direction: column; gap: 8px; margin-top: var(--space-8); }
 .faq-item {
   background: var(--surface);
