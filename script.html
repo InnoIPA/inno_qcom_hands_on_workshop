@@ -217,6 +217,10 @@
           <div class="step-body">
             <h3><span class="zh-only">Windows 主機設定</span><span class="en-only">Windows Host Setup</span></h3>
             <div class="sub">[WIN-PS]</div>
+            <button class="step-video-link" type="button" data-video-src="uploads/videos/step0.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </button>
             <p>
               <span class="zh-only">以<strong>系統管理員</strong>開啟 Windows PowerShell（開始 → 搜尋 PowerShell → 右鍵 → <strong>以系統管理員身分執行</strong>），切換到套件的 <code>scripts</code> 資料夾：</span>
               <span class="en-only">Open Windows PowerShell <strong>as Administrator</strong> (Start → search for PowerShell → right-click → <strong>Run as administrator</strong>), then change into the package's <code>scripts</code> folder:</span>
@@ -282,6 +286,10 @@
           <div class="step-body">
             <h3><span class="zh-only">安裝 adb，確認 Q911 連線</span><span class="en-only">Install adb, check Q911 connection</span></h3>
             <div class="sub">[HOST] · <span class="zh-only">約 1 分鐘</span><span class="en-only">~1 min</span></div>
+            <button class="step-video-link" type="button" data-video-src="uploads/videos/step1.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </button>
             <p>
               <span class="zh-only">用 <code>apt</code> 安裝 adb；<code>adb devices</code> 應該會列出 EXMP-Q911。</span>
               <span class="en-only">Install adb via <code>apt</code>; <code>adb devices</code> should list EXMP-Q911.</span>
@@ -320,6 +328,10 @@
           <div class="step-body">
             <h3><span class="zh-only">安裝 Docker，取得 iQ-Foundry image</span><span class="en-only">Install Docker, get iQ-Foundry image</span></h3>
             <div class="sub">[HOST] · <span class="zh-only">數分鐘</span><span class="en-only">a few min</span></div>
+            <button class="step-video-link" type="button" data-video-src="uploads/videos/step2.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </button>
             <p>
               <span class="zh-only">安裝 Docker Engine，pull <code>innodiskorg/iqf:latest</code>。</span>
               <span class="en-only">Install Docker Engine, pull <code>innodiskorg/iqf:latest</code>.</span>
@@ -351,6 +363,10 @@
           <div class="step-body">
             <h3><span class="zh-only">登入 Qualcomm AI Hub</span><span class="en-only">Log in to Qualcomm AI Hub</span></h3>
             <div class="sub">[HOST] · <span class="zh-only">幾秒</span><span class="en-only">seconds</span></div>
+            <button class="step-video-link" type="button" data-video-src="uploads/videos/step3.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </button>
             <p>
               <span class="zh-only">登入 Qualcomm AI Hub 並驗證 token（需要帶入 API key 參數）。</span>
               <span class="en-only">Log in to Qualcomm AI Hub and verify the token (API key argument required).</span>
@@ -894,6 +910,13 @@
   <img id="img-lightbox-img" src="" alt="">
 </div>
 
+<div class="video-lightbox" id="video-lightbox" role="dialog" aria-modal="true">
+  <button class="img-lightbox-close" data-video-lightbox-close aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+  </button>
+  <video id="video-lightbox-video" controls playsinline></video>
+</div>
+
 <div class="modal-overlay" id="troubleshoot-modal-1" role="dialog" aria-modal="true">
   <div class="modal-panel">
     <div class="modal-head">
@@ -916,9 +939,9 @@
         <div class="flow-step">
           <div class="flow-num">1</div>
           <div class="flow-head"><span class="zh-only">執行 <code class="badge">lsusb</code>，確認未出現 <code class="badge">Qualcomm、exmp-q911</code></span><span class="en-only">Run <code class="badge">lsusb</code> and confirm <code class="badge">Qualcomm、exmp-q911</code> is missing</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">/mnt/c/Users/IPA/Desktop/hands_on_workshop_package_v1.0.0/scripts</span> $ lsusb
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span> $ lsusb
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-<span class="u">user@IPA001</span>:<span class="p">/mnt/c/Users/IPA/Desktop/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
+<span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
           <div class="flow-desc">
             <span class="zh-only">清單中只有 root hub、沒有 <code class="badge">911</code> 裝置，代表 USB 裝置未掛入 WSL。</span>
             <span class="en-only">Only root hubs are listed — no <code class="badge">911</code> device — meaning the USB device hasn't been attached to WSL.</span>
@@ -928,7 +951,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
         <div class="flow-step">
           <div class="flow-num">2</div>
           <div class="flow-head"><span class="zh-only">執行 <code class="badge">exit</code>，退出 WSL 回到 PowerShell</span><span class="en-only">Run <code class="badge">exit</code> to leave WSL and return to PowerShell</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">/mnt/c/Users/IPA/Desktop/hands_on_workshop_package_v1.0.0/scripts</span>$ exit
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$ exit
 logout
 PS C:\Users\IPA\Desktop\hands_on_workshop_package_v1.0.0\scripts&gt;</div>
           <div class="flow-desc">
@@ -945,9 +968,9 @@ PS C:\Users\IPA\Desktop\hands_on_workshop_package_v1.0.0\scripts&gt;</div>
         <div class="flow-step">
           <div class="flow-num">4</div>
           <div class="flow-head"><span class="zh-only">重新進入後再執行一次lsusb，確認出現<code class="badge">Qualcomm、exmp-q911</code></span><span class="en-only">Re-enter WSL from PowerShell via STEP_0</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">/mnt/c/Users/IPA/Desktop/hands_on_workshop_package_v1.0.0/scripts</span> $ lsusb
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span> $ lsusb
 Bus 001 Device 001: ID 05c6:9135 Qualcomm, Inc. exmp-q911
-<span class="u">user@IPA001</span>:<span class="p">/mnt/c/Users/IPA/Desktop/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
+<span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
         </div>
 
       </div>
@@ -977,10 +1000,10 @@ Bus 001 Device 001: ID 05c6:9135 Qualcomm, Inc. exmp-q911
         <div class="flow-step">
           <div class="flow-num">1</div>
           <div class="flow-head"><span class="zh-only">執行 <code class="badge">lsusb</code>，確認未出現 <code class="badge">Qualcomm、exmp-q911</code></span><span class="en-only">Run <code class="badge">lsusb</code> and confirm <code class="badge">Qualcomm、exmp-q911</code> is missing</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$ lsusb
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$ lsusb
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-<span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$</div>
+<span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
           <div class="flow-desc">
             <span class="zh-only">清單中只有 root hub、沒有 <code class="badge">911</code> 裝置，代表 USB 裝置未掛入 WSL。</span>
             <span class="en-only">Only root hubs are listed — no <code class="badge">911</code> device — meaning the USB device hasn't been attached to WSL.</span>
@@ -990,7 +1013,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
         <div class="flow-step">
           <div class="flow-num">2</div>
           <div class="flow-head"><span class="zh-only">執行 <code class="badge">exit</code>，退出 WSL 回到 PowerShell</span><span class="en-only">Run <code class="badge">exit</code> to leave WSL and return to PowerShell</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">/mnt/c/Users/IPA/Desktop/hands_on_workshop_package_v1.0.0/scripts</span>$ exit
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$ exit
 logout
 PS C:\Users\IPA\Desktop\hands_on_workshop_package_v1.0.0\scripts&gt;</div>
           <div class="flow-desc">
@@ -1012,10 +1035,10 @@ PS C:\Users\IPA\Desktop\hands_on_workshop_package_v1.0.0\scripts&gt;</div>
         <div class="flow-step">
           <div class="flow-num">4</div>
           <div class="flow-head"><span class="zh-only">執行 <code class="badge">ps aux | grep adb</code>，確認是否有 adb server 殘留</span><span class="en-only">Run <code class="badge">ps aux | grep adb</code> to check for a leftover adb server</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$ ps aux |grep adb
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$ ps aux |grep adb
 user      1027  0.1  0.0 386592  6268 ?    Ssl  11:29   0:00 <span class="hl">adb</span> -L tcp:5037 fork-server server --reply-fd 4
 user      1090  0.0  0.0   4036  2360 pts/0 S+  11:30   0:00 grep --color=auto <span class="hl">adb</span>
-<span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$</div>
+<span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
           <div class="flow-desc">
             <span class="zh-only">看到 <code class="badge">adb -L tcp:5037 fork-server server</code> 這行代表 adb server 還在，需要清除。</span>
             <span class="en-only">Seeing the <code class="badge">adb -L tcp:5037 fork-server server</code> line means the adb server is still running and needs to be cleared.</span>
@@ -1025,10 +1048,10 @@ user      1090  0.0  0.0   4036  2360 pts/0 S+  11:30   0:00 grep --color=auto <
         <div class="flow-step">
           <div class="flow-num">5</div>
           <div class="flow-head"><span class="zh-only">執行 <code class="badge">adb kill-server</code>，再確認已清除</span><span class="en-only">Run <code class="badge">adb kill-server</code>, then confirm it's cleared</span></div>
-          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$ adb kill-server
-<span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$ ps aux |grep adb
+          <div class="term"><span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$ adb kill-server
+<span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$ ps aux |grep adb
 user      1113  0.0  0.0   4036  2356 pts/0 S+  11:31   0:00 grep --color=auto <span class="hl">adb</span>
-<span class="u">user@IPA001</span>:<span class="p">~/scripts</span>$</div>
+<span class="u">user@IPA001</span>:<span class="p">~/hands_on_workshop_package_v1.0.0/scripts</span>$</div>
           <div class="flow-desc">
             <span class="zh-only">只剩 <code class="badge">grep --color=auto adb</code> 自己這行，代表 adb server 已停止，可繼續操作。</span>
             <span class="en-only">Only the <code class="badge">grep --color=auto adb</code> line itself remains — the adb server has stopped and you can continue.</span>
