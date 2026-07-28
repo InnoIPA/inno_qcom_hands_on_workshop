@@ -287,34 +287,6 @@
     });
   }
 
-  // ---------- STEP TUTORIAL VIDEO ----------
-  function initVideoLightbox() {
-    const overlay = document.getElementById('video-lightbox');
-    const video = document.getElementById('video-lightbox-video');
-    if (!overlay || !video) return;
-
-    const open = (src) => {
-      video.src = src;
-      overlay.classList.add('on');
-      video.play().catch(() => {});
-    };
-    const close = () => {
-      overlay.classList.remove('on');
-      video.pause();
-      video.removeAttribute('src');
-      video.load();
-    };
-
-    document.querySelectorAll('[data-video-src]').forEach(el => {
-      el.addEventListener('click', () => open(el.getAttribute('data-video-src')));
-    });
-    overlay.querySelectorAll('[data-video-lightbox-close]').forEach(b => b.addEventListener('click', close));
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.classList.contains('on')) close();
-    });
-  }
-
   // ---------- GENERIC MODAL ----------
   function initModals() {
     document.querySelectorAll('[data-open-modal]').forEach(btn => {
@@ -345,7 +317,6 @@
     initSearch();
     initFaq();
     initLightbox();
-    initVideoLightbox();
     initModals();
   });
 })();

@@ -1889,6 +1889,7 @@ code.badge {
   color: var(--accent-text);
   font-size: 12px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   transition: background var(--dur-fast), border-color var(--dur-fast);
 }
@@ -1897,26 +1898,6 @@ code.badge {
   border-color: var(--accent-text);
 }
 .step-video-link svg { width: 13px; height: 13px; flex-shrink: 0; }
-
-.video-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: color-mix(in oklab, var(--bg) 85%, transparent);
-  backdrop-filter: blur(8px);
-  padding: 6vh 6vw;
-}
-.video-lightbox.on { display: flex; }
-.video-lightbox video {
-  max-width: min(900px, 100%);
-  max-height: 100%;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-elevated);
-  background: #000;
-}
 
 /* ===== EN/ZH visibility ===== */
 [data-lang="en"] .zh-only { display: none !important; }

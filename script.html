@@ -65,7 +65,7 @@
     </h2>
     <p class="lead">
       <span class="zh-only">在 <strong>Windows 11 + WSL2</strong> 主機與 <strong>EXMP-Q911</strong>（Qualcomm QCS9075）裝置上，走一遍完整的 YOLO26 模型部署流程。</span>
-      <span class="en-only">Walk through the full YOLO26 model deployment flow on a <strong>Windows 11 + WSL2</strong> host with an <strong>EXMP-Q911</strong> (Qualcomm QCS9075) target device.</code> — just run them in order. No manual command typing is required.</span>
+      <span class="en-only">Walk through the full YOLO26 model deployment flow on a <strong>Windows 11 + WSL2</strong> host with an <strong>EXMP-Q911</strong> (Qualcomm QCS9075) target device — just run them in order. No manual command typing is required.</span>
     </p>
 
     <!-- Pipeline diagram -->
@@ -217,10 +217,10 @@
           <div class="step-body">
             <h3><span class="zh-only">Windows 主機設定</span><span class="en-only">Windows Host Setup</span></h3>
             <div class="sub">[WIN-PS]</div>
-            <button class="step-video-link" type="button" data-video-src="uploads/videos/step0.mp4">
+            <a class="step-video-link" href="uploads/videos/step0.mp4" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
               <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
-            </button>
+            </a>
             <p>
               <span class="zh-only">以<strong>系統管理員</strong>開啟 Windows PowerShell（開始 → 搜尋 PowerShell → 右鍵 → <strong>以系統管理員身分執行</strong>），切換到套件的 <code>scripts</code> 資料夾：</span>
               <span class="en-only">Open Windows PowerShell <strong>as Administrator</strong> (Start → search for PowerShell → right-click → <strong>Run as administrator</strong>), then change into the package's <code>scripts</code> folder:</span>
@@ -286,10 +286,10 @@
           <div class="step-body">
             <h3><span class="zh-only">安裝 adb，確認 Q911 連線</span><span class="en-only">Install adb, check Q911 connection</span></h3>
             <div class="sub">[HOST] · <span class="zh-only">約 1 分鐘</span><span class="en-only">~1 min</span></div>
-            <button class="step-video-link" type="button" data-video-src="uploads/videos/step1.mp4">
+            <a class="step-video-link" href="uploads/videos/step1.mp4" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
               <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
-            </button>
+            </a>
             <p>
               <span class="zh-only">用 <code>apt</code> 安裝 adb；<code>adb devices</code> 應該會列出 EXMP-Q911。</span>
               <span class="en-only">Install adb via <code>apt</code>; <code>adb devices</code> should list EXMP-Q911.</span>
@@ -328,10 +328,10 @@
           <div class="step-body">
             <h3><span class="zh-only">安裝 Docker，取得 iQ-Foundry image</span><span class="en-only">Install Docker, get iQ-Foundry image</span></h3>
             <div class="sub">[HOST] · <span class="zh-only">數分鐘</span><span class="en-only">a few min</span></div>
-            <button class="step-video-link" type="button" data-video-src="uploads/videos/step2.mp4">
+            <a class="step-video-link" href="uploads/videos/step2.mp4" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
               <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
-            </button>
+            </a>
             <p>
               <span class="zh-only">安裝 Docker Engine，pull <code>innodiskorg/iqf:latest</code>。</span>
               <span class="en-only">Install Docker Engine, pull <code>innodiskorg/iqf:latest</code>.</span>
@@ -363,10 +363,10 @@
           <div class="step-body">
             <h3><span class="zh-only">登入 Qualcomm AI Hub</span><span class="en-only">Log in to Qualcomm AI Hub</span></h3>
             <div class="sub">[HOST] · <span class="zh-only">幾秒</span><span class="en-only">seconds</span></div>
-            <button class="step-video-link" type="button" data-video-src="uploads/videos/step3.mp4">
+            <a class="step-video-link" href="uploads/videos/step3.mp4" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
               <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
-            </button>
+            </a>
             <p>
               <span class="zh-only">登入 Qualcomm AI Hub 並驗證 token（需要帶入 API key 參數）。</span>
               <span class="en-only">Log in to Qualcomm AI Hub and verify the token (API key argument required).</span>
@@ -419,6 +419,10 @@
             <!-- 4 · offline (default) -->
             <div class="tab-panel on" data-mode-group="s4" data-mode-panel="offline">
               <div class="sub">[Q911] · <span class="zh-only">約 3 分 45 秒</span><span class="en-only">~3 min 45 sec</span></div>
+              <a class="step-video-link" href="uploads/videos/step4_offline.mp4" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+              </a>
               <p>
                 <span class="zh-only">不需要 host 或 Q911 連網：直接使用套件內附、已經匯出好的 FP32 bundle（模型 + streampipe image tarball），推送並安裝到 Q911，啟動 FP32 streampipe 9ch。</span>
                 <span class="en-only">No internet needed on the host or the Q911: uses the pre-built FP32 bundle included in the package (model + streampipe image tarball), pushes and installs it on the Q911, and starts FP32 streampipe 9ch.</span>
@@ -457,6 +461,10 @@
             <div class="tab-panel" data-mode-group="s4" data-mode-panel="online">
 
               <div class="sub">[HOST · AI Hub] · <span class="zh-only">約 1–2 分鐘</span><span class="en-only">~1–2 min</span></div>
+              <a class="step-video-link" href="uploads/videos/step4_1.mp4" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+              </a>
               <p>
                 <span class="zh-only"><strong>4.1</strong> 建置 <code>iqf-aihub</code> image，匯出 YOLO26 FP32 TFLite 模型。</span>
                 <span class="en-only"><strong>4.1</strong> Build the <code>iqf-aihub</code> image, export YOLO26 FP32 TFLite.</span>
@@ -476,9 +484,22 @@
                 </summary>
                 <div class="success-body">[Step 1/4] DONE  Directory<br>[Step 2/4] DONE  Image built <br>[Step 3/4] DONE  Export finished <br>[Step 4/4] DONE  FP32 model<br>All steps completed successfully!</div>
               </details>
+              <details class="callout" style="margin-top:var(--space-4);">
+              <summary>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+                <span class="zh-only">前往 Qualcomm AI Hub 以檢視模型狀況。</span><span class="en-only">Visit Qualcomm AI Hub to view model status.</span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="success-body"><a class="link" href="https://aihub.qualcomm.com/" target="_blank" rel="noopener">aihub.qualcomm.com</a></div>
+              <img class="shot" src="uploads\view model status.png" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-top:var(--space-4);">
+            </details>
 
               <div style="margin-top:var(--space-6);padding-top:var(--space-6);border-top:1px dashed var(--border);">
                 <div class="sub">[Q911 · <span class="zh-only">首次執行</span><span class="en-only">first run</span>] · <span class="zh-only">首次約 3 分鐘</span><span class="en-only">~3 min first run</span></div>
+                <a class="step-video-link" href="uploads/videos/step4_2.mp4" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                  <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+                </a>
                 <p>
                   <span class="zh-only"><strong>4.2</strong> 把 iQ-Studio 推送並安裝到 Q911，啟動 FP32 streampipe 9ch。</span>
                   <span class="en-only"><strong>4.2</strong> Push and install iQ-Studio on Q911, start FP32 streampipe 9ch.</span>
@@ -533,6 +554,10 @@
           <div class="step-body">
             <h3><span class="zh-only">部署 Q911 runtime venv</span><span class="en-only">Deploy Q911 runtime venv</span></h3>
             <div class="sub"><span class="zh-only">離線</span><span class="en-only">Offline</span> · <span class="zh-only">幾秒</span><span class="en-only">seconds</span></div>
+            <a class="step-video-link" href="uploads/videos/step5_1.mp4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </a>
             <p>
               <span class="zh-only">部署裝置端的 venv；執行 <code>adb kill-server</code>，把 USB 讓給 iQ-Foundry container 內的 adb 使用。</span>
               <span class="en-only">Deploy the device-side venv; run <code>adb kill-server</code> to release USB for the container.</span>
@@ -581,6 +606,10 @@
             <!-- 5.2 · offline (default) -->
             <div class="tab-panel on" data-mode-group="s5_2" data-mode-panel="offline">
               <div class="sub">[HOST] · <span class="zh-only">約 3 秒</span><span class="en-only">~3 sec</span></div>
+              <a class="step-video-link" href="uploads/videos/step5_2_offline.mp4" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+              </a>
               <p>
                 <span class="zh-only">不需要連上 AI Hub，也不需要下載任何東西：直接把套件內預先量化好的 INT8 模型複製到輸出路徑。</span>
                 <span class="en-only">No AI Hub connection or downloads needed: copies the pre-quantized INT8 model already included in the package to the output path.</span>
@@ -605,6 +634,10 @@
             <!-- 5.2 · online -->
             <div class="tab-panel" data-mode-group="s5_2" data-mode-panel="online">
               <div class="sub">[HOST · AI Hub] · <span class="zh-only">約 5–9 分鐘</span><span class="en-only">~5–9 min</span></div>
+              <a class="step-video-link" href="uploads/videos/step5_2.mp4" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+              </a>
               <p>
                 <span class="zh-only">qc 量化流程：YOLO26 <code>.pt</code> → INT8 <code>.tflite</code>。</span>
                 <span class="en-only">qc quantization: YOLO26 <code>.pt</code> → INT8 <code>.tflite</code>.</span>
@@ -638,6 +671,10 @@
           <div class="step-body">
             <h3><span class="zh-only">mAP 比較：FP32 vs INT8</span><span class="en-only">mAP comparison (FP32 vs INT8)</span></h3>
             <div class="sub"><span class="zh-only">離線</span><span class="en-only">Offline</span> · <span class="zh-only">數分鐘</span><span class="en-only">a few min</span></div>
+            <a class="step-video-link" href="uploads/videos/step5_3.mp4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </a>
             <p>
               <span class="zh-only">比較 FP32 與 INT8 模型的 mAP（<code>--max-images 50</code>）。</span>
               <span class="en-only">Compare FP32 vs INT8 mAP (<code>--max-images 50</code>).</span>
@@ -679,6 +716,10 @@
           <div class="step-body">
             <h3><span class="zh-only">iQ-Foundry 裝置端測試</span><span class="en-only">iQ-Foundry on-device test</span></h3>
             <div class="sub"><span class="zh-only">離線</span><span class="en-only">Offline</span> · <span class="zh-only">數十秒</span><span class="en-only">tens of seconds</span></div>
+            <a class="step-video-link" href="uploads/videos/step5_4.mp4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </a>
             <p>
               <span class="zh-only">透過 adb 在 Q911 上執行 INT8 推論。</span>
               <span class="en-only">Run INT8 inference on the Q911 via adb.</span>
@@ -765,6 +806,10 @@
             <!-- 5.5 · offline (default) -->
             <div class="tab-panel on" data-mode-group="s5_5" data-mode-panel="offline">
               <div class="sub">[Q911] · <span class="zh-only">約 40 秒</span><span class="en-only">~40 sec</span></div>
+              <a class="step-video-link" href="uploads/videos/step5_5_offline.mp4" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+              </a>
               <p>
                 <span class="zh-only">不需要連網：直接使用套件內附的離線 INT8 bundle（模型 + streampipe 設定檔），推送到 Q911 並啟動 INT8 streampipe 9ch。</span>
                 <span class="en-only">No internet needed: uses the offline INT8 bundle included in the package (model + streampipe config), pushes it to the Q911, and starts INT8 streampipe 9ch.</span>
@@ -795,6 +840,10 @@
             <!-- 5.5 · online -->
             <div class="tab-panel" data-mode-group="s5_5" data-mode-panel="online">
               <div class="sub">[Q911] · <span class="zh-only">幾秒</span><span class="en-only">seconds</span></div>
+              <a class="step-video-link" href="uploads/videos/step5_5.mp4" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+              </a>
               <p>
                 <span class="zh-only">推送 INT8 模型與設定檔，啟動 INT8 streampipe 9ch。</span>
                 <span class="en-only">Push the INT8 model and config, start INT8 streampipe 9ch.</span>
@@ -834,6 +883,10 @@
           <div class="step-body">
             <h3><span class="zh-only">正確關閉 WSL</span><span class="en-only">Properly shut down WSL</span></h3>
             <div class="sub">[WSL] · <span class="zh-only">幾秒</span><span class="en-only">seconds</span></div>
+            <a class="step-video-link" href="uploads/videos/step6.mp4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span class="zh-only">觀看教學影片</span><span class="en-only">Watch tutorial video</span>
+            </a>
             <p>
               <span class="zh-only">Step 5.5 的 INT8 streampipe 跑完、按 <code>Ctrl+C</code> 之後，畫面會停留在 WSL 裡面。離開前，先退出 WSL，再關閉它：</span>
               <span class="en-only">After Step 5.5's INT8 streampipe finishes and you press <code>Ctrl+C</code>, you'll be left inside the WSL shell. Before wrapping up, exit WSL and then shut it down:</span>
@@ -908,13 +961,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
   </button>
   <img id="img-lightbox-img" src="" alt="">
-</div>
-
-<div class="video-lightbox" id="video-lightbox" role="dialog" aria-modal="true">
-  <button class="img-lightbox-close" data-video-lightbox-close aria-label="Close">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-  </button>
-  <video id="video-lightbox-video" controls playsinline></video>
 </div>
 
 <div class="modal-overlay" id="troubleshoot-modal-1" role="dialog" aria-modal="true">
