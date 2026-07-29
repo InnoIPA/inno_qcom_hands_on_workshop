@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  👉 <b>[<a href="https://aiotads.github.io/iq-hands-on-workshop___confidential/" style="color: #ff69b4; text-decoration: none;">Click Here to Access Web Platform</a>]</b> 👈
+  👉 <b>[<a href="https://innoipa.github.io/inno_qcom_hands_on_workshop/" style="color: #ff69b4; text-decoration: none;">Click Here to Access Web Platform</a>]</b> 👈
 </p>
 
 ---
@@ -24,7 +24,13 @@ Welcome to the **Hands-On Workshop Prep Site**. This is a self-contained, browse
 
 ## 🚀 Key Modules & Web Pages
 
+<<<<<<< HEAD
 ### 1. [Overview](https://aiotads.github.io/iq-hands-on-workshop___confidential/index.html)
+=======
+This web platform is divided into 5 structured sections, fully optimized for technical training readiness:
+
+### 1. [Overview](https://innoipa.github.io/inno_qcom_hands_on_workshop/)
+>>>>>>> fa8fbb14e9d445786a4cd2f394bda4d167d3c729
 The main landing page serves as the orientation center for the event.
 * **Prerequisite Fast-Track:** Direct entry into the Pre-Install guide.
 * **Interactive Agenda:** Full timeline of the workshop day, speaker-by-speaker.
@@ -32,6 +38,7 @@ The main landing page serves as the orientation center for the event.
 <img width="1385" height="735" alt="overview_preview" src="https://github.com/user-attachments/assets/cb15d3c6-06a1-4013-bfce-b7c37c5265e3" />
 
 
+<<<<<<< HEAD
 ### 2. [Pre-install Guide](https://aiotads.github.io/iq-hands-on-workshop___confidential/pre-install.html)
 A Windows-focused environment preparation dashboard titled **"Get the Toolchain Ready."**
 * **Quick Walkthrough Video:** A short video card at the top previews the whole pre-install flow before diving in.
@@ -57,6 +64,23 @@ The core hands-on walkthrough: **Qualcomm AI Hub × YOLO26 — BYOM from FP32 to
 
 
 ### 5. [Handouts](https://aiotads.github.io/iq-hands-on-workshop___confidential/handouts.html)
+=======
+### 2. [Pre-install Guide](https://innoipa.github.io/inno_qcom_hands_on_workshop/pre-install.html)
+A robust environment preparation dashboard titled **"Get the Toolchain Ready."**
+* **Everything at a Glance:** A consolidated status table tracking multi-platform dependencies across Windows and Ubuntu.
+* **Step-by-Step Instructions:** Interactive copy-to-clipboard code blocks and download steps for essential tools including `adb`, Qualcomm Software Center, PCAT Tool, QUD, QDL, and Docker Desktop.
+<img width="1337" height="846" alt="Pre_install" src="https://github.com/user-attachments/assets/7bf7df87-8693-423c-8641-124df63a6a0a" />
+
+
+### 3. [Windows Flashing Guidel Guide](https://innoipa.github.io/inno_qcom_hands_on_workshop/flashing.html)
+A highly visual, step-by-step walkthrough for deploying firmware/images onto the target device.
+* **Qualcomm Toolchain Integration:** Clear guides on utilizing the Qualcomm Software Center, QPST/ePCAT apps, and QDL.
+* **Hardware Interfacing:** Learn how to connect devices, choose memory types, execute the download option, and switch back to normal boot mode.
+<img width="1328" height="842" alt="flashing_preview" src="https://github.com/user-attachments/assets/9a621529-e12b-401f-bcc6-06c901ab38f0" />
+
+
+### 4. [Handouts](https://innoipa.github.io/inno_qcom_hands_on_workshop/handouts.html)
+>>>>>>> fa8fbb14e9d445786a4cd2f394bda4d167d3c729
 The on-site reference dashboard for physical and open-source materials.
 * **Hardware Checklist:** What to bring yourself (a Windows 11 laptop) vs. what's provided on-site (EXMP-Q911, cables, monitor, UVC camera).
 * **Qualcomm Account:** Reminder to register before arriving.
