@@ -89,6 +89,9 @@
       <a href="flashing.html" class="nav-link active"><span class="zh-only">燒錄</span><span class="en-only">Flashing</span></a>
       <a href="handouts.html" class="nav-link"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a>
     </nav>
+    <button class="nav-burger" type="button" data-mobile-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
     <span class="nav-spacer"></span>
     <button class="nav-search" data-open-search aria-label="Open search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -109,6 +112,13 @@
     </a>
   </div>
 </header>
+
+<div class="mobile-nav-panel" id="mobile-nav">
+  <a href="index.html"><span class="zh-only">總覽</span><span class="en-only">Overview</span></a>
+  <a href="pre-install.html"><span class="zh-only">預先安裝</span><span class="en-only">Pre-Install</span></a>
+  <a href="flashing.html" class="active"><span class="zh-only">燒錄</span><span class="en-only">Flashing</span></a>
+  <a href="handouts.html"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a>
+</div>
 
 <main class="shell">
   <section class="page">
@@ -271,6 +281,7 @@
             </div>
             <figure class="shot">
               <img class="shot-img" src="uploads\Select the folder.png" alt="Select the folder">
+            </figure>
             <div class="callout">
               <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg></span>
               <div>

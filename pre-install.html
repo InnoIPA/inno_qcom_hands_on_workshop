@@ -32,8 +32,11 @@
       <a href="index.html" class="nav-link"><span class="zh-only">總覽</span><span class="en-only">Overview</span></a>
       <a href="pre-install.html" class="nav-link active"><span class="zh-only">預先安裝</span><span class="en-only">Pre-Install</span></a>
       <a href="flashing.html" class="nav-link"><span class="zh-only">燒錄</span><span class="en-only">Flashing</span></a>
-      <a href="handouts.html" class="nav-link"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a> 
+      <a href="handouts.html" class="nav-link"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a>
     </nav>
+    <button class="nav-burger" type="button" data-mobile-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
     <span class="nav-spacer"></span>
     <button class="nav-search" data-open-search aria-label="Open search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -54,6 +57,13 @@
     </a> 
   </div>
 </header>
+
+<div class="mobile-nav-panel" id="mobile-nav">
+  <a href="index.html"><span class="zh-only">總覽</span><span class="en-only">Overview</span></a>
+  <a href="pre-install.html" class="active"><span class="zh-only">預先安裝</span><span class="en-only">Pre-Install</span></a>
+  <a href="flashing.html"><span class="zh-only">燒錄</span><span class="en-only">Flashing</span></a>
+  <a href="handouts.html"><span class="zh-only">講義</span><span class="en-only">Handouts</span></a>
+</div>
 
 <main class="shell">
   <section class="page">
@@ -141,10 +151,12 @@
                 <td class="tool">adb</td>
                 <td><span class="zh-only">連線 / 除錯平台</span><span class="en-only">Device connect / debug</span></td>
                 <td><span class="cell-yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></span></td>
+              </tr>
               <tr>
                 <td class="tool">Qualcomm Software Center <span style="color:var(--text-3);font-weight:500;">(QSC)</span></td>
                 <td><span class="zh-only">下載 PCAT / QUD</span><span class="en-only">Download PCAT / QUD</span></td>
                 <td><span class="cell-yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></span></td>
+              </tr>
               <tr>
                 <td class="tool">PCAT Tool</td>
                 <td><span class="zh-only">燒錄 image 工具</span><span class="en-only">Image flashing tool</span></td>
@@ -154,6 +166,7 @@
                 <td class="tool">QUD</td>
                 <td><span class="zh-only">Qualcomm USB 驅動</span><span class="en-only">Qualcomm USB driver</span></td>
                 <td><span class="cell-yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></span></td>
+              </tr>
               <tr>
                 <td class="tool">QDL</td>
                 <td><span class="zh-only">命令列燒錄工具</span><span class="en-only">CLI flashing tool</span></td>
@@ -288,7 +301,7 @@
                   <span class="en-only">A pre-configured environment is essential for the hands-on session; please ensure the installation is successful beforehand.</span></div>
                 <ol class="step-list">
                   <li>
-                    <span class="zh-only">以<strong>管理員權限</strong>開啟 <strong>Windows PowerShell</strong>，執行以下指令。</span></span>
+                    <span class="zh-only">以<strong>管理員權限</strong>開啟 <strong>Windows PowerShell</strong>，執行以下指令。</span>
                     <span class="en-only">Open <strong>Windows PowerShell</strong> with <strong>Administrator rights</strong>and execute the following command.</span>
     
                     <div class="code">

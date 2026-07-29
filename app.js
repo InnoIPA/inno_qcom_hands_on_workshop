@@ -287,6 +287,28 @@
     });
   }
 
+  // ---------- MOBILE NAV (hamburger) ----------
+  function initMobileNav() {
+    const btn = document.querySelector('[data-mobile-nav-toggle]');
+    const panel = document.getElementById('mobile-nav');
+    if (!btn || !panel) return;
+
+    const close = () => { panel.classList.remove('on'); btn.setAttribute('aria-expanded', 'false'); };
+    const open = () => { panel.classList.add('on'); btn.setAttribute('aria-expanded', 'true'); };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      panel.classList.contains('on') ? close() : open();
+    });
+    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('click', (e) => {
+      if (panel.classList.contains('on') && !panel.contains(e.target) && !btn.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && panel.classList.contains('on')) close();
+    });
+  }
+
   // ---------- GENERIC MODAL ----------
   function initModals() {
     document.querySelectorAll('[data-open-modal]').forEach(btn => {
@@ -318,5 +340,6 @@
     initFaq();
     initLightbox();
     initModals();
+    initMobileNav();
   });
 })();
