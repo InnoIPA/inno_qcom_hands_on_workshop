@@ -16,7 +16,7 @@
 
 ---
 
-Welcome to the **Hands-On Workshop Prep Site**. This is a self-contained, browser-native platform for the **Qualcomm AI Hub × YOLO26 BYOM** workshop — it takes participants from pre-install, through hardware flashing, through the full day-of deployment script (FP32 → INT8 on the EXMP-Q911), to the on-site handouts.
+Welcome to the **Hands-On Workshop Site**. This is a self-contained, browser-native platform for the **Qualcomm AI Hub × YOLO26 BYOM** workshop — it takes participants from pre-install, through hardware flashing, through the full day-of deployment script (FP32 → INT8 on the EXMP-Q911), to the on-site handouts.
 
 **No repository cloning or code downloading is required for users.** Participants simply open this web platform in their browser to get everything ready before and during the live sessions. The whole site is bilingual (中文 / English, toggle in the header), supports dark/light theme, and has a global search (`⌘K` / `Ctrl+K`) that jumps straight to any step, tool, or troubleshooting tip.
 
