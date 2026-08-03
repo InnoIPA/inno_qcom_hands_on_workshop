@@ -228,4 +228,11 @@ window.SEARCH_INDEX = [
     body: '工作坊套件下載連結，SharePoint 共用資料夾',
     bodyEn: 'Workshop package download link, a SharePoint shared folder.',
     tags: ['download', '下載', '共用資料夾', 'shared folder', 'sharepoint', '8/5'] },
+
+  // ----- History -----
+  { page: 'history', pageLabel: '活動紀錄 / HISTORY', href: 'history.html',
+    title: '第 1 場 · 2026.07.30', titleEn: 'Session 1 · 2026.07.30',
+    body: 'Qualcomm AI Hub × YOLO26 BYOM 動手做工作坊，花絮與紀錄',
+    bodyEn: 'Qualcomm AI Hub × YOLO26 BYOM hands-on workshop — highlights and notes.',
+    tags: ['history', '活動紀錄', '花絮', 'session 1', '第 1 場', 'workshop'] },
 ];

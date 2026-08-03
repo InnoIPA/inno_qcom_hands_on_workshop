@@ -263,21 +263,28 @@
   function initLightbox() {
     const overlay = document.getElementById('img-lightbox');
     const img = document.getElementById('img-lightbox-img');
+    const caption = document.getElementById('img-lightbox-caption');
     if (!overlay || !img) return;
 
-    const open = (src, alt) => {
+    const open = (src, alt, cap) => {
       img.src = src;
       img.alt = alt || '';
+      if (caption) caption.textContent = cap || '';
       overlay.classList.add('on');
     };
     const close = () => {
       overlay.classList.remove('on');
       img.src = '';
+      if (caption) caption.textContent = '';
     };
 
     document.querySelectorAll('[data-lightbox-src]').forEach(el => {
       el.addEventListener('click', () => {
-        open(el.getAttribute('data-lightbox-src'), el.getAttribute('data-lightbox-alt') || '');
+        // Pick up the currently-visible caption text from a nearby .cap element
+        // (respects the active zh/en toggle) — falls back to data-lightbox-caption.
+        const capEl = el.closest('figure, .history-photo')?.querySelector('.cap');
+        const capText = capEl ? capEl.innerText.trim() : (el.getAttribute('data-lightbox-caption') || '');
+        open(el.getAttribute('data-lightbox-src'), el.getAttribute('data-lightbox-alt') || '', capText);
       });
     });
     overlay.querySelectorAll('[data-lightbox-close]').forEach(b => b.addEventListener('click', close));
